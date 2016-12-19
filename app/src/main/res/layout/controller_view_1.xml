@@ -21,11 +21,11 @@
         android:text="@string/input_word" />
 
     <Button
-        android:onClick="save"
-        android:text="Save"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/save_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/inputText" />
+        android:layout_below="@id/inputText"
+        android:layout_centerHorizontal="true"
+        android:text="Save" />
 
 </RelativeLayout>

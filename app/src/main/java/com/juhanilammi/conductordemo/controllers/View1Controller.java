@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.bluelinelabs.conductor.Controller;
@@ -27,10 +28,17 @@ public class View1Controller extends Controller implements View1 {
     protected View onCreateView(LayoutInflater inflater, ViewGroup container) {
         View view = inflater.inflate(R.layout.controller_view_1, container, false);
         inputField = (EditText) view.findViewById(R.id.inputText);
+        Button saveButton = (Button) view.findViewById(R.id.save_button);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                save();
+            }
+        });
         return view;
     }
 
-    public void save(View view) {
+    public void save() {
         if (!inputField.getText().toString().isEmpty()){
             presenter.saveData(inputField.getText().toString());
         }

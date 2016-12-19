@@ -19,7 +19,7 @@ public class DemoModel {
 
     private DemoModel(Context context) {
         this.context = context;
-        sharedPrefs = ConductorApp.getContext().getSharedPreferences(ConductorApp.getContext().getPackageName(), Context.MODE_PRIVATE);
+        sharedPrefs = ConductorApp.getContext().getSharedPreferences("conductor_app", Context.MODE_PRIVATE);
     }
 
     public static DemoModel getInstance() {
